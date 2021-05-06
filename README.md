@@ -1,6 +1,6 @@
-<center>
-  <a href="#"><img src="https://i.imgur.com/RcY9qnM.png" alt="Logo" height="300"></a>
-</center>
+<p align="center">
+  <img align=center src="https://i.imgur.com/RcY9qnM.png" alt="Logo" height="300">
+</p>
 
 repo.me is denoted to be a community colloborated standard for incipient tweak developers. To provide ease on maintaining a personal repository and show your developments to the community.</br>
 This template contains samples on how you can easily make depiction pages without replicating your HTML pages.</br>
@@ -18,8 +18,8 @@ Found something that can be improved? Found a mistake? Please do make a pull req
 
 You **must** have apt-ftparchive on your operating system to utilize repo.me. This can be solved on Windows via WSL. My subsystem OS is Debian, which I know does contain apt-ftparchive. This can be solved on macOS via Diatrus' precompiled version (downloaded automatically via `updaterepo.sh`, and perms will be set automatically as well). For iOS / iPadOS, you'll need `apt-utils` on the Procursus repository (Elucubratus support is unknown as of now).</br>
 
-You **must** have `wget, zstd, xz, bzip2, & gzip` installed on macOS. Don't worry, the script will automatically check for homebrew installation and dependencies, if not found,
-installation for all of the dependencies and homebrew will starts.</br>
+You **must** have `wget, zstd, & xz` installed on macOS. Don't worry, the script will automatically check for homebrew installation and dependencies, if not found,
+installation for all of the dependencies and homebrew will start.</br>
 
 ### 2. Download / Fork repo.me
 
@@ -31,16 +31,29 @@ A. If you want to use your root `username.github.io` as your repo, fork this rep
 
 B. If you want to use a subfolder for your existing `username.github.io` as your repo (example `username.github.io/repo`), fork this repo and rename it to `repo`. So when adding it in your Package Manager of choice, use `https://username.github.io/repo`.
 
-You can change `repo` to anything you want, like `cydia` for example. So your repo URL would be `https://username.github.io/cydia`.
+You can change `repo` to anything you want, like `sileo` for example. So your repo URL would be `https://username.github.io/sileo`.
 
 ### 3. Personalization
 
 **Release File**
 
-Modify `repo.conf` in ./assets/repo by changing the labels: </br>
-`ORIGIN_HERE`, `LABEL_HERE`, `CODENAME_HERE`, and `DESCRIPTION_HERE` </br>
-
-`updaterepo.sh` will take care of the Release file after modifying the config. So you're now finished regarding `Release`.
+Modify `repo.conf` in `./assets/repo` by changing the labels pointed by `<--`: </br>
+```
+APT {
+FTPArchive {
+Release {
+Origin "ORIGIN_HERE"; <-- 
+Label "LABEL_HERE"; <-- 
+Suite stable;
+Version 1.0;
+Codename CODENAME_HERE; <-- 
+Architectures iphoneos-arm;
+Components main;
+Description "DESCRIPTION_HERE"; <--
+};
+};
+};
+```
 
 **Branding**
 
@@ -56,17 +69,13 @@ The data below are the links that appear at the bottom of every **Webview / Cydi
     <footerlinks>
         <link>
             <name>Follow me on Twitter</name>
-<<<<<<< Updated upstream
-            <url>https://twitter.com/qdxHimself</url> # Feel free to swap your twitter in for this!
-=======
             <url>https://twitter.com/revisitable</url> # Feel free to swap your twitter in for this!
->>>>>>> Stashed changes
-            <iconclass>glyphicon glyphicon-user</iconclass>
+            <iconclass>fa fa-twitter</iconclass>
         </link>
         <link> # You can remove this if you wish, however if I may, please do not do so! It will allow others to find repo.me such as you have!
             <name>I want this depiction template</name>
             <url>https://github.com/revisitable/repo.me</url>
-            <iconclass>glyphicon glyphicon-thumbs-up</iconclass>
+            <iconclass>fa fa-thumbs-up</iconclass>
         </link>
     </footerlinks>
 </repo>
@@ -84,30 +93,18 @@ Next guide will show you how to assign and customize your depiction pages.
 
 ### 1.1 Adding a simple depiction page (Web Folder / Cydia)
 
-<<<<<<< Updated upstream
-Go to the depictions folder and duplicate the folder `com.iloveemogirls.oldpackage`. </br>
-=======
 Go to the depictions folder and duplicate the folder `me.revisitable.oldpackage`. </br>
->>>>>>> Stashed changes
 Rename the duplicate with the same name as your package name. </br>
 There are 2 files inside the folder - `info.xml` and `changelog.xml`. </br>
 Update the 2 files with information regading your package. </br>
 The tags are pretty much self-explanatory. </br>
-<<<<<<< Updated upstream
-Contact [jay@iloveemogirls.com](mailto:jay@iloveemogirls.com) for questions.
-=======
 Contact [@revisitable](https://twitter.com/revisitable) for questions.
->>>>>>> Stashed changes
 
 `info.xml`.
 
 ```xml
 <package>
-<<<<<<< Updated upstream
-    <id>com.iloveemogirls.oldpackage</id>
-=======
     <id>me.revisitable.oldpackage</id>
->>>>>>> Stashed changes
     <name>Old Package</name>
     <version>1.0.0-1</version>
     <compatibility>
@@ -145,17 +142,10 @@ Contact [@revisitable](https://twitter.com/revisitable) for questions.
 
 ### 1.2 Adding a simple depiction page (Native Folder / Sileo)
 
-<<<<<<< Updated upstream
-Go to the /depictions/native/com.iloveemogirls.sample and copy the file `depiction.json`. </br>
-Move into a folder labeled as your package name. </br>
-Edit The Labeled Parts (i.e. VERSION_NUMBER, TWEAK_NAME, etc.) or use the Sileo Depiction Generator by [@M4cs:](https://twitter.com/maxbridgland) [SileoGen](https://sileogen.com/). </br>
-Contact [jay@iloveemogirls.com](mailto:jay@iloveemogirls.com) for questions.
-=======
 Go to the /depictions/native/me.revisitable.samplepackage and copy the file `depiction.json`. </br>
 Move into a folder labeled as your package name. </br>
 Edit The Labeled Parts (i.e. VERSION_NUMBER, TWEAK_NAME, etc.)</br>
 Contact [@revisitable](https://twitter.com/revisitable) for questions.
->>>>>>> Stashed changes
 
 #### 2. Link the depiction page in your tweak's `control` file
 
@@ -169,27 +159,20 @@ Depiction: https://username.github.io/repo/depictions/web/?p=[idhere]
 Replace `[idhere]` with your actual package name.
 
 ```text
-<<<<<<< Updated upstream
-Depiction: https://username.github.io/repo/depictions/web/?p=com.iloveemogirls.oldpackage
-=======
 Depiction: https://username.github.io/repo/depictions/web/?p=me.revisitable.oldpackage
->>>>>>> Stashed changes
 ```
 
-For Sileo Depictions, add the SileoDepiction key alongside the Depiction in your `control` file before compiling it.
+For Native Depictions, add the SileoDepiction key alongside the Depiction in your `control` file before compiling it.
 
 ```text
-<<<<<<< Updated upstream
-SileoDepiction: https://username.github.io/repo/depictions/native/com.iloveemogirls.sample/depiction.json
-=======
 SileoDepiction: https://username.github.io/repo/depictions/native/me.revisitable.samplepackage/depiction.json
->>>>>>> Stashed changes
 ```
 
 #### 3. Rebuilding the `Packages` file
+With your update `control` file, build your tweak and store the resulting debian into the `/debians` folder of your repo.
 
-The `Packages` file is handled by `updaterepo.sh`. Windows users should be using WSL (I use Debian), Linux users should be
-checking for apt-ftparchive, and macOS (10.10+) users should be using Diatrus' [recompiled version of apt-ftparchive](https://apt.procurs.us/apt-ftparchive) (this is now automatically downloaded via `updaterepo.sh` and perms will automatically be set for apt-ftparchive to work on macOS). macOS users will be asked for their password when running this, this is due to `sudo`, the perms are transmuted after apt-ftparchive is automatically pulled via wget, but not without you entering your password.
+The `Packages` file is handled by `updaterepo.sh`. Windows users should be using WSL, Linux users should be
+checking for apt-ftparchive, and macOS (10.10+) users should be using Diatrus' recompiled version of apt-ftparchive (this is automatically downloaded and setup via `updaterepo.sh`). macOS users will be asked for their password when running this, this is due to `sudo`, the perms are transmuted after apt-ftparchive is automatically pulled via wget, but not without you entering your password.
 
 #### 4. (Optional) Adding your GPG Key (Soon to be Integrated)
 
@@ -200,7 +183,7 @@ Now run `update-repo.sh` and then type `gpg -abs -o Release.gpg Release` and ent
 
 #### 5. Repository at last!
 
-If you haven't done yet, go ahead and add your repo to your package manager. </br>
+Push your changes and if you haven't done yet, go ahead and add your repo to your package manager. </br>
 You should now be able to install your tweak from your own repo.
 
 <a href="#"><img src="https://i.imgur.com/y4oV9VV.png" alt="colored line"></a>
@@ -216,11 +199,7 @@ Change The Following Lines:
 ```
  "url": "https://raw.githubusercontent.com/revisitable/repo.me/master/assets/Banners/RepoHeader.png", <---- The Package Banner
         "title": "Sample Package", <---- Your Package Name
-<<<<<<< Updated upstream
-        "package": "com.iloveemogirls.newpackage", <---- The Actual Package
-=======
         "package": "me.revisitable.newpackage", <---- The Actual Package
->>>>>>> Stashed changes
 ```
 
   <p align="center">Special Thanks and Credits to: <a href="https://github.com/Supermamon/">Supermamon</a> for <a href="https://github.com/supermamon/Reposi3">Reposi3</a> (the base) & <a href="https://twitter.com/Diatrus/">Diatrus</a> for apt-ftparchive on macOS</p>
