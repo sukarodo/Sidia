@@ -1,18 +1,4 @@
 <repo>
-<<<<<<< Updated upstream
-    <footerlinks>
-        <link>
-            <name>Email me</name>
-            <url>mailto:jay@iloveemogirls.com</url>
-            <iconclass>glyphicon glyphicon-user</iconclass>
-        </link>
-        <link>
-            <name>I want this depiction template</name>
-            <url>https://github.com/revisitable/repo.me</url>
-            <iconclass>glyphicon glyphicon-thumbs-up</iconclass>
-        </link>
-    </footerlinks>
-=======
 	<footerlinks>
 		<link>
 			<name>Follow me on Twitter</name>
@@ -25,5 +11,4 @@
 			<iconclass>fa fa-thumbs-up</iconclass>
 		</link>
 	</footerlinks>
->>>>>>> Stashed changes
 </repo>
