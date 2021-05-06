@@ -31,9 +31,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     fi
     # Leave room for arm macs.
 else
-<<<<<<< Updated upstream
     echo "Running an unsupported operating system...? Contact me via Email jay@iloveemogirls.com" # incase I've missed support for something, they should be contacting me.
-=======
         if test ! "$(which apt-ftparchive)"; then
             echo "Please install apt-utils."
             exit 1
@@ -44,7 +42,6 @@ else
         if [[ ! -z "${needed[@]}" ]]; then
             printf -- "Please install:\n%s\n" "${needed[@]}" && exit 1
         fi
->>>>>>> Stashed changes
 fi
 
 rm -f {Packages{,.xz,.zst},Release{,.gpg}}
