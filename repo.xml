@@ -1,4 +1,5 @@
 <repo>
+<<<<<<< Updated upstream
     <footerlinks>
         <link>
             <name>Email me</name>
@@ -11,4 +12,18 @@
             <iconclass>glyphicon glyphicon-thumbs-up</iconclass>
         </link>
     </footerlinks>
+=======
+	<footerlinks>
+		<link>
+			<name>Follow me on Twitter</name>
+			<url>https://twitter.com/revisitable</url>
+			<iconclass>fa fa-twitter</iconclass>
+		</link>
+		<link>
+			<name>I want this depiction template</name>
+			<url>https://github.com/revisitable/repo.me/</url>
+			<iconclass>fa fa-thumbs-up</iconclass>
+		</link>
+	</footerlinks>
+>>>>>>> Stashed changes
 </repo>

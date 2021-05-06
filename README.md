@@ -1,9 +1,6 @@
 <center>
-  <a href="#"><img src="https://i.imgur.com/gKt64bk.png" alt="Logo"></a>
-  <h4 align="center">a modern iOS apt repository template</h4>
+  <a href="#"><img src="https://i.imgur.com/RcY9qnM.png" alt="Logo" height="300"></a>
 </center>
-
-<a href="#"><img src="https://i.imgur.com/y4oV9VV.png" alt="colored line"></a>
 
 repo.me is denoted to be a community colloborated standard for incipient tweak developers. To provide ease on maintaining a personal repository and show your developments to the community.</br>
 This template contains samples on how you can easily make depiction pages without replicating your HTML pages.</br>
@@ -59,7 +56,11 @@ The data below are the links that appear at the bottom of every **Webview / Cydi
     <footerlinks>
         <link>
             <name>Follow me on Twitter</name>
+<<<<<<< Updated upstream
             <url>https://twitter.com/qdxHimself</url> # Feel free to swap your twitter in for this!
+=======
+            <url>https://twitter.com/revisitable</url> # Feel free to swap your twitter in for this!
+>>>>>>> Stashed changes
             <iconclass>glyphicon glyphicon-user</iconclass>
         </link>
         <link> # You can remove this if you wish, however if I may, please do not do so! It will allow others to find repo.me such as you have!
@@ -83,18 +84,30 @@ Next guide will show you how to assign and customize your depiction pages.
 
 ### 1.1 Adding a simple depiction page (Web Folder / Cydia)
 
+<<<<<<< Updated upstream
 Go to the depictions folder and duplicate the folder `com.iloveemogirls.oldpackage`. </br>
+=======
+Go to the depictions folder and duplicate the folder `me.revisitable.oldpackage`. </br>
+>>>>>>> Stashed changes
 Rename the duplicate with the same name as your package name. </br>
 There are 2 files inside the folder - `info.xml` and `changelog.xml`. </br>
 Update the 2 files with information regading your package. </br>
 The tags are pretty much self-explanatory. </br>
+<<<<<<< Updated upstream
 Contact [jay@iloveemogirls.com](mailto:jay@iloveemogirls.com) for questions.
+=======
+Contact [@revisitable](https://twitter.com/revisitable) for questions.
+>>>>>>> Stashed changes
 
 `info.xml`.
 
 ```xml
 <package>
+<<<<<<< Updated upstream
     <id>com.iloveemogirls.oldpackage</id>
+=======
+    <id>me.revisitable.oldpackage</id>
+>>>>>>> Stashed changes
     <name>Old Package</name>
     <version>1.0.0-1</version>
     <compatibility>
@@ -132,10 +145,17 @@ Contact [jay@iloveemogirls.com](mailto:jay@iloveemogirls.com) for questions.
 
 ### 1.2 Adding a simple depiction page (Native Folder / Sileo)
 
+<<<<<<< Updated upstream
 Go to the /depictions/native/com.iloveemogirls.sample and copy the file `depiction.json`. </br>
 Move into a folder labeled as your package name. </br>
 Edit The Labeled Parts (i.e. VERSION_NUMBER, TWEAK_NAME, etc.) or use the Sileo Depiction Generator by [@M4cs:](https://twitter.com/maxbridgland) [SileoGen](https://sileogen.com/). </br>
 Contact [jay@iloveemogirls.com](mailto:jay@iloveemogirls.com) for questions.
+=======
+Go to the /depictions/native/me.revisitable.samplepackage and copy the file `depiction.json`. </br>
+Move into a folder labeled as your package name. </br>
+Edit The Labeled Parts (i.e. VERSION_NUMBER, TWEAK_NAME, etc.)</br>
+Contact [@revisitable](https://twitter.com/revisitable) for questions.
+>>>>>>> Stashed changes
 
 #### 2. Link the depiction page in your tweak's `control` file
 
@@ -149,13 +169,21 @@ Depiction: https://username.github.io/repo/depictions/web/?p=[idhere]
 Replace `[idhere]` with your actual package name.
 
 ```text
+<<<<<<< Updated upstream
 Depiction: https://username.github.io/repo/depictions/web/?p=com.iloveemogirls.oldpackage
+=======
+Depiction: https://username.github.io/repo/depictions/web/?p=me.revisitable.oldpackage
+>>>>>>> Stashed changes
 ```
 
 For Sileo Depictions, add the SileoDepiction key alongside the Depiction in your `control` file before compiling it.
 
 ```text
+<<<<<<< Updated upstream
 SileoDepiction: https://username.github.io/repo/depictions/native/com.iloveemogirls.sample/depiction.json
+=======
+SileoDepiction: https://username.github.io/repo/depictions/native/me.revisitable.samplepackage/depiction.json
+>>>>>>> Stashed changes
 ```
 
 #### 3. Rebuilding the `Packages` file
@@ -188,8 +216,12 @@ Change The Following Lines:
 ```
  "url": "https://raw.githubusercontent.com/revisitable/repo.me/master/assets/Banners/RepoHeader.png", <---- The Package Banner
         "title": "Sample Package", <---- Your Package Name
+<<<<<<< Updated upstream
         "package": "com.iloveemogirls.newpackage", <---- The Actual Package
+=======
+        "package": "me.revisitable.newpackage", <---- The Actual Package
+>>>>>>> Stashed changes
 ```
 
-  <p align="center">Special Thanks and Credits to: <a href="https://github.com/Supermamon/">Supermamon</a> for <a href="https://github.com/supermamon/Reposi3">Reposi3</a> (the base) & <a href="https://twitter.com/Diatrus/">Diatrus</a> for apt-ftparchive on macOS. And last but not least, biggest thanks to everyone who made a pull request to make repo.me better!</p>
+  <p align="center">Special Thanks and Credits to: <a href="https://github.com/Supermamon/">Supermamon</a> for <a href="https://github.com/supermamon/Reposi3">Reposi3</a> (the base) & <a href="https://twitter.com/Diatrus/">Diatrus</a> for apt-ftparchive on macOS</p>
 </center>
